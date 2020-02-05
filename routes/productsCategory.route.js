@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const categories = await getCategories();
+  console.log(categories)
   res.send(categories);
 });
 

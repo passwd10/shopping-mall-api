@@ -11,13 +11,12 @@ const app = express();
 
 const PORT = process.env.PORT;
 
-const corsOptions = {
-  origin: 'https://answer-shopping-mall.netlify.com',
-  optionsSuccessStatus: 200,
-}
-
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: process.env.CORS_ORIGIN,
+  optionsSuccessStatus: 200,
+  credentials: true,
+}));
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
