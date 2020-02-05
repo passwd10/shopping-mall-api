@@ -10,6 +10,9 @@
     "start": "npm run build && nodemon ./build/index.js",
     "test": "jest"
   },
+  "engines": {
+    "node": "13.6.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
