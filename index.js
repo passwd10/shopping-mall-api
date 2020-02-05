@@ -13,7 +13,8 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 app.use(cors({
-  origin: process.env.CORS_ORIGIN,
+  origin: 'https://answer-shopping-mall.netlify.com',
+  optionsSuccessStatus: 200,
   credentials: true,
 }));
 
