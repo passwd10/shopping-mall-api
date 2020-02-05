@@ -8,7 +8,6 @@ import { initCollection, clearCollection } from './services/collectionService';
 require('dotenv').config();
 
 const app = express();
-
 const PORT = process.env.PORT;
 
 app.use(express.json());
@@ -48,7 +47,8 @@ mongoose.connect(
   + process.env.DB_USER
   + ':'
   + process.env.DB_PW
-  + process.env.DB_HOST,
+  + process.env.DB_HOST
+  +'?ssl=true',
   {
     useCreateIndex: true,
     useNewUrlParser: true,
