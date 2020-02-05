@@ -4,14 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./ -s",
-    "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && nodemon ./build/index.js",
+    "start": "nodemon index.js --exec babel-node --presets @babel/preset-env",
     "test": "jest"
-  },
-  "engines": {
-    "node": "13.6.0"
   },
   "keywords": [],
   "author": "",
