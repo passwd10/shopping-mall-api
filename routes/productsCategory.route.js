@@ -4,6 +4,8 @@ import { getCategories } from '../services/categoryService'
 
 const router = express.Router();
 
+console.log('hi');
+
 router.get('/', async (req, res) => {
   const categories = await getCategories();
   console.log(categories)
