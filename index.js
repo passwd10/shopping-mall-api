@@ -41,12 +41,7 @@ db.once('open', async () => {
   await initCollection();
 });
 
-mongoose.connect(
-  process.env.DB_SCHEME
-  + process.env.DB_USER
-  + ':'
-  + process.env.DB_PW
-  + process.env.DB_HOST,
+mongoose.connect('mongodb+srv://answer:answer@answercluster-wmnam.gcp.mongodb.net/test?retryWrites=true&w=majority',
   {
     useCreateIndex: true,
     useNewUrlParser: true,
