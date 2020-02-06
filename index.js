@@ -12,7 +12,7 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://answer-shopping-mall.netlify.com',
+  origin: process.env.CORS_ORIGIN,
   optionsSuccessStatus: 200,
 }));
 
@@ -41,7 +41,7 @@ db.once('open', async () => {
   await initCollection();
 });
 
-mongoose.connect('mongodb+srv://answer:answer@answercluster-wmnam.gcp.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_URL,
   {
     useCreateIndex: true,
     useNewUrlParser: true,
