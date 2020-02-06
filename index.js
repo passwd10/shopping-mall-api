@@ -47,8 +47,7 @@ mongoose.connect(
   + process.env.DB_USER
   + ':'
   + process.env.DB_PW
-  + process.env.DB_HOST
-  +'?ssl=true',
+  + process.env.DB_HOST,
   {
     useCreateIndex: true,
     useNewUrlParser: true,
