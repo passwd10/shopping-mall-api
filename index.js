@@ -24,6 +24,7 @@ app.use(session({
     name: 'userInfoCookie',
     httpOnly: true,
     secure: false,
+    domain: 'answer-shopping-mall.netlify.com/',
     maxAge: 3600000,
     expires: new Date(Date.now() + 3600000),
   }
