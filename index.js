@@ -24,10 +24,8 @@ app.use(session({
   saveUninitialized: true,
   cookie: {
     name: 'userInfoCookie',
-    httpOnly: true,
-    secure: true,
-    path: '/',
-    domain: 'https://answer-shopping-mall.netlify.com',
+    httpOnly: false,
+    secure: false,
   }
 }));
 
