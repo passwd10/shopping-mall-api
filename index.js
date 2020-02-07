@@ -24,6 +24,7 @@ app.use(session({
     name: 'userInfoCookie',
     httpOnly: false,
     secure: false,
+    domain: 'answer-shopping-mall.netlify.com',
   }
 }));
 
