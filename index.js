@@ -3,7 +3,6 @@ import session from 'express-session';
 import cors from 'cors';
 import Route from './routes';
 import mongoose from 'mongoose';
-import cookieParser from 'cookie-parser';
 import { initCollection, clearCollection } from './services/collectionService';
 
 require('dotenv').config();
@@ -17,7 +16,6 @@ app.use(cors({
   optionsSuccessStatus: 200,
 }));
 
-app.use(cookieParser());
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
