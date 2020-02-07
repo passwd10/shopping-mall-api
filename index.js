@@ -22,8 +22,8 @@ app.use(session({
   saveUninitialized: true,
   cookie: {
     name: 'userInfoCookie',
-    httpOnly: false,
-    secure: true,
+    httpOnly: true,
+    secure: false,
     maxAge: 3600000,
     expires: new Date(Date.now() + 3600000),
   }
