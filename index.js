@@ -23,8 +23,8 @@ app.use(session({
   cookie: {
     name: 'userInfoCookie',
     httpOnly: true,
-    secure: false,
-    domain: 'answer-shopping-mall.netlify.com/',
+    path: '/',
+    domain: 'answer-shopping-mall.netlify.com',
     maxAge: 3600000,
     expires: new Date(Date.now() + 3600000),
   }
