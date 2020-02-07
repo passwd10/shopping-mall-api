@@ -27,7 +27,7 @@ app.use(session({
     httpOnly: true,
     secure: true,
     path: '/',
-    domain: 'answer-shopping-mall.netlify.com',
+    domain: 'https://answer-shopping-mall.netlify.com',
   }
 }));
 

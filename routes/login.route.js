@@ -10,8 +10,7 @@ router.post('/', async (req, res) => {
   const session = req.session;
 
   session.userInfo = userInfo;
-  // res.send(session.userInfo);
-  res.cookie('name', 'userInfo', { domain: 'answer-shopping-mall.netlify.com', path: '/', secure: true });
+  res.send(session.userInfo);
 });
 
 router.delete('/', (req, res) => {
