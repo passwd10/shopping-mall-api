@@ -2,10 +2,10 @@
 
 ![API-tree](api-tree.png)
 
-- routes : URL 라우터
-- services : 비즈니스 로직
-- models : DB 스키마
-- repositories : DB의 interface
+- routes : URL별로 라우터 분리
+- services : 비즈니스 로직 구현
+- models : DB 스키마 모델링
+- repositories : DB와 API서버의 interface
 
 ## Quck Start
 
@@ -22,3 +22,9 @@ npm start
 - npm
 - MongoDB
 - Docker
+- Linux
+
+## 배포
+
+- API서버 : Heroku
+- MongoDB : Atlas
