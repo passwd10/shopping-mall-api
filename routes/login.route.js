@@ -10,10 +10,6 @@ router.post('/', async (req, res) => {
   const session = req.session;
 
   session.userInfo = userInfo;
-  res.cookie('userInfoCookie',{
-    httpOnly: false,
-    secure: false,
-    domain: 'answer-shopping-mall.netlify.com',});
   res.send(session.userInfo);
 });
 

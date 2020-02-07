@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(cors({
   origin: process.env.CORS_ORIGIN,
   optionsSuccessStatus: 200,
+  credentials: true,
 }));
 
 app.use(session({
