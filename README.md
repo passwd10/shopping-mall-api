@@ -7,14 +7,6 @@
 - models : DB 스키마 모델링
 - repositories : DB와 API서버의 interface
 
-## Quck Start
-
-```bash
-git clone https://github.com/passwd10/shopping-mall-api.git
-npm install
-npm start
-```
-
 ## 사용 기술
 
 - Node.JS
