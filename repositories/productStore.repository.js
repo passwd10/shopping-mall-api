@@ -21,8 +21,9 @@ class ProductStoreRepository {
   }
 
   async findByKeyword(keyword) {
-    const products = await Product.find({});
-    return products.filter(product => product.title.includes(keyword));
+    return await Product.find({
+      title: new RegExp('^' + keyword + '$', "i")
+    });
   }
 
   async findAll() {

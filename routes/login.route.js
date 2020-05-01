@@ -6,11 +6,13 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   const { userId, userPasswd } = req.body;
-  const userInfo = await isUserInUserStore(userId, userPasswd);
-  const session = req.session;
 
-  session.userInfo = userInfo;
-  res.send(session.userInfo);
+  try {
+    req.session.userId = await isUserInUserStore(userId, userPasswd);
+    res.status(200).send();
+  } catch (err) {
+    res.status(400).send('login fail');
+  }
 });
 
 router.delete('/', (req, res) => {

@@ -32,6 +32,13 @@ class UserRepository {
     });
   };
 
+  async findByIdPassword(id, password) {
+    return await User.find({
+      userId: id,
+      password: password,
+    });
+  };
+
   async findAll() {
     const users = await User.find({});
     return users;

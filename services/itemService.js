@@ -15,7 +15,7 @@ const addItem = (item) => {
 };
 
 const searchItems = async (keyword) => {
-  return product.findByKeyword(keyword);
+  return await product.findByKeyword(keyword);
 };
 
 export {
