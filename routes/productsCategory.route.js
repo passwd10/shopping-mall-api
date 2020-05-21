@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const categories = await getCategories();
+
   if (categories.length === 0) {
     res.status(404).send();
     return;

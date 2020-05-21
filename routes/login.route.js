@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   const { userId, userPasswd } = req.body;
-
   try {
     req.session.userId = await isUserInUserStore(userId, userPasswd);
     res.status(200).send();

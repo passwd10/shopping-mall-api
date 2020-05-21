@@ -22,7 +22,7 @@ class ProductStoreRepository {
 
   async findByKeyword(keyword) {
     return await Product.find({
-      title: new RegExp('^' + keyword + '$', "i")
+      title: new RegExp(keyword, "i")
     });
   }
 
