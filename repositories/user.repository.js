@@ -28,7 +28,7 @@ class UserRepository {
 
   async findById(id) {
     return await User.find({
-      userId: id,
+      _id: id,
     });
   };
 

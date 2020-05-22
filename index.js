@@ -20,16 +20,17 @@ app.use(cors({
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
-  resave: false,
+  resave: true,
   saveUninitialized: true,
   cookie: {
-    name: 'userId',
-    httpOnly: false,
+    name: 'gggg',
+    httpOnly: true,
     secure: false,
     maxAge: 3600000,
     expires: new Date(Date.now() + 360000)
   }
 }));
+
 app.use(Route);
 app.use('/static', express.static('public'));
 

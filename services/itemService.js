@@ -13,7 +13,7 @@ const getItem = (id) => {
 const addItem = (item) => {
   return product.store(item);
 };
-
+         
 const searchItems = async (keyword) => {
   return await product.findByKeyword(keyword);
 };

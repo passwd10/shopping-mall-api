@@ -1,14 +1,16 @@
 import express from 'express';
 
 import { setUserStore, getUserInfo } from '../services/userService';
+import session from 'express-session';
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  const { userId } = req.session;
+  console.log('마이페이지  session._id', session.Store._id)
+  
   try {
-    const id = await getUserInfo(userId);
-    res.status(200).send({ userId: id });
+    const data = await getUserInfo(session.Store._id);
+    res.status(200).send(data);
   } catch (err) {
     res.status(400).send('error')
   }

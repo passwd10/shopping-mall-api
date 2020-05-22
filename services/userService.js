@@ -4,22 +4,20 @@ const userRepo = new UserRepository();
 
 const isUserInUserStore = async (userId, userPasswd) => {
   const data = await userRepo.findByIdPassword(userId, userPasswd);
-
   if (data.length === 0) {
     throw new Error('Invalid id or password');
   }
-  
-  return data[0].userId;
+  return data[0]._id;
 }
 
-const getUserInfo = async (userId) => {
-  const data = await userRepo.findById(userId); 
+const getUserInfo = async (id) => {
+  const data = await userRepo.findById(id); 
 
   if (data.length === 0) {
     throw new Error('There is no session info')
   }
 
-  return data[0].userId;
+  return data[0];
 }
 
 const setUserStore = (userId, updateInfo) => {
