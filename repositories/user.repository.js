@@ -44,10 +44,10 @@ class UserRepository {
     return users;
   };
 
-  async setUser(userId, updateInfo) {
-    await User.updateOne({ userId: userId }, updateInfo);
+  async setUser(id, updateInfo) {
+    await User.updateOne({ _id: id }, updateInfo);
     return User.find({
-      userId: userId,
+      _id: id,
     });
   };
 

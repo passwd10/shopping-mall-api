@@ -20,8 +20,8 @@ const getUserInfo = async (id) => {
   return data[0];
 }
 
-const setUserStore = (userId, updateInfo) => {
-  return userRepo.setUser(userId, updateInfo);
+const setUserStore = (id, updateInfo) => {
+  return userRepo.setUser(id, updateInfo);
 };
 
 const createUserList = (userInfo) => {

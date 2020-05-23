@@ -6,8 +6,6 @@ import session from 'express-session';
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  console.log('마이페이지  session._id', session.Store._id)
-  
   try {
     const data = await getUserInfo(session.Store._id);
     res.status(200).send(data);
@@ -17,9 +15,8 @@ router.get('/', async (req, res) => {
 });
 
 router.patch('/', async (req, res) => {
-  const { userId } = req.session;
   const { updateInfo } = req.body;
-  await setUserStore(userId, updateInfo);
+  await setUserStore(session.Store._id, updateInfo);
   res.status(200).send();
 });
 
