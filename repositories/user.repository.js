@@ -26,6 +26,12 @@ class UserRepository {
     });
   };
 
+  async findByUserId(userId) {
+    return await User.find({
+      userId: userId,
+    });
+  };
+
   async findById(id) {
     return await User.find({
       _id: id,
