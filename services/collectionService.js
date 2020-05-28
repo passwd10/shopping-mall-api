@@ -1,5 +1,5 @@
 import users from '../mock-data/user.json';
-import products from '../mock-data/product.json';
+import products from '../mock-data/product.js';
 import categories from '../mock-data/category.json';
 
 import User from '../models/userSchema';

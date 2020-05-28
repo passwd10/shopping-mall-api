@@ -13,6 +13,10 @@ const getItem = (id) => {
 const addItem = (item) => {
   return product.store(item);
 };
+
+const addImg = (url) => {
+  return product.store(url);
+};
          
 const searchItems = async (keyword) => {
   return await product.findByKeyword(keyword);
@@ -23,4 +27,5 @@ export {
   getItem,
   addItem,
   searchItems,
+  addImg,
 };

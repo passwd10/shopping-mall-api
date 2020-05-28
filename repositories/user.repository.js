@@ -57,26 +57,27 @@ class UserRepository {
     });
   };
 
-  async addCart(userId, product) {
-    const user = await this.findById(userId);
+  async addCart(id, product) {
+    console.log('id',id, 'product', product)
+    const user = await this.findById(id);
     const userCart = _.uniqBy([...user[0].cartList, product], 'productId');
 
-    await User.updateOne({ userId: userId }, { cartList: userCart });
+    await User.updateOne({ _id: id }, { cartList: userCart });
     return User.find({
-      userId: userId,
+      _id: id,
     });
   };
 
-  async deleteOneInCart(userId, product) {
-    const user = await this.findById(userId);
+  async deleteOneInCart(id, product) {
+    const user = await this.findById(id);
     const userCart = _.remove(user[0].cartList, (v) => {
       return !_.isEqual(v, product);
     });
 
-    await User.updateOne({ userId: userId }, { cartList: userCart });
+    await User.updateOne({ _id: id }, { cartList: userCart });
     return User.find({
-      userId: userId,
-    });  
+      _id: id,
+    });
   }
 }
 

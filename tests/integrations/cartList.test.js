@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import app from '../../index';
 
 import users from '../../mock-data/user.json';
-import products from '../../mock-data/product.json'
+import products from '../../mock-data/product.js'
 import User from '../../models/userSchema';
 import Product from '../../models/productSchema';
 

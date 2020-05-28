@@ -1,7 +1,7 @@
 import request from 'supertest';
 import mongoose from 'mongoose';
 
-import products from '../../mock-data/product.json';
+import products from '../../mock-data/product.js';
 import Product from '../../models/productSchema';
 
 import app from '../../index';

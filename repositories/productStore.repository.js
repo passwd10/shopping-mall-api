@@ -10,7 +10,6 @@ class ProductStoreRepository {
     return await Product.create({
       ...product,
       id: length + 1,
-      img: DEFAULT_IMAGE,
     })
   }
 

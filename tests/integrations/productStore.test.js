@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 import app from '../../index';
 
-import products from '../../mock-data/product.json'
+import products from '../../mock-data/product.js'
 import Product from '../../models/productSchema';
 
 beforeAll(async () => {
