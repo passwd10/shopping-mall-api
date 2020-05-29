@@ -39,8 +39,8 @@ const db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', async () => {
   console.log('Connected to mongod server');
-  await clearCollection();
-  await initCollection();
+  // await clearCollection();
+  // await initCollection();
 });
 
 mongoose.connect(process.env.MONGODB_URL,
